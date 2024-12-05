@@ -1,0 +1,32 @@
+
+   table {
+    border-collapse: collapse;
+  }
+  
+  
+  th,
+  td {
+    border: 1px solid rgb(160 160 160);
+    padding: 2px;
+  }
+  
+  td:last-of-type {
+    text-align: center;
+  }
+ 
+
+  .language-selector {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .language-selector select {
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
+  pre {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    overflow-x: auto;
+  }
