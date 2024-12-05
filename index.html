@@ -36,7 +36,10 @@
 
             <!---Menu de navigation du header-->
 
-            <menu class="bg-slate-50 dark:bg-neutral-800  text-slate-50  p-3 text-xs flex justify-end">
+            <menu class="bg-slate-50 dark:bg-neutral-800  text-slate-50  p-3 text-xs flex justify-between">
+                <div>
+                    <button class="p-2 rounded bg-indigo-400" data-newDocsBtn>Nouvelle version</button>
+                </div>
                 <ul class="flex items-center md:space-x-5 space-x-3 ">
                     <!--Message Header-->
                     <div>
@@ -94,7 +97,7 @@
                     <!---Header-->
                     <table class="text-xs text-center md:relative">
                         <!--editon mode is active...-->
-                        <svg data-edit-header-table xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 absolute  top-[4.5rem] -rotate-90 left-[10.3rem] stroke-indigo-400">
+                        <svg data-edit-header-table xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 absolute  top-[5.3rem] -rotate-90 left-[10.3rem] stroke-indigo-400">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                         </svg>
                           
@@ -138,12 +141,12 @@
 
                                 <tr>
                                     <th scope="row" data-block class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-2 font-semibold">Description</th>
-                                    <td colspan="4" data-block class="block-Header-0 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Identifiant unique ICCID" class="bg-slate-200"></td>
-                                    <td colspan="2" data-block class="block-Header-1 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Mode d'envoie" class="bg-slate-200"></td>
-                                    <td colspan="4" data-block class="block-Header-2 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Numéro unique associé au message" class="bg-slate-200"></td>
-                                    <td colspan="2" data-block class="block-Header-3 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Niveau de batterie" class="bg-slate-200"></td>
-                                    <td colspan="2" data-block class="block-Header-4 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Température" class="bg-slate-200"></td>
-                                    <td colspan="2" data-block class="block-Header-5 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Flags" class="bg-slate-200"></td>
+                                    <td colspan="4" data-block class="block-Header-0 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Identifiant unique ICCID" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
+                                    <td colspan="2" data-block class="block-Header-1 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Mode d'envoie" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
+                                    <td colspan="4" data-block class="block-Header-2 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Numéro unique associé au message" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
+                                    <td colspan="2" data-block class="block-Header-3 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Niveau de batterie" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
+                                    <td colspan="2" data-block class="block-Header-4 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Température" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
+                                    <td colspan="2" data-block class="block-Header-5 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Flags" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
                                 </tr>
                         
 
@@ -200,9 +203,9 @@
                     </table>
 
                     <!--Buton valider-->
-                    <div class="flex space-x-2" data-header-editMode>
-                        <button class="rounded p-2 bg-indigo-300 text-xs hover:bg-indigo-400 ease-in-out duration-75 dark:bg-neutral-800 dark:hover:bg-neutral-900">Mettre à jour</button>
-                        <button class="rounded p-2 bg-indigo-300 text-xs hover:bg-indigo-400 ease-in-out duration-75 dark:bg-neutral-800 dark:hover:bg-neutral-900">Annuler</button>
+                    <div class="flex space-x-2 text-slate-50" data-header-editMode>
+                        <button class="rounded p-2 bg-indigo-400 text-xs hover:bg-indigo-400 ease-in-out duration-75 dark:bg-neutral-800 dark:hover:bg-neutral-900">Mettre à jour</button>
+                        <button class="rounded p-2 bg-indigo-400 text-xs hover:bg-indigo-400 ease-in-out duration-75 dark:bg-neutral-800 dark:hover:bg-neutral-900">Annuler</button>
                     </div>
 
                     <!---payload-->

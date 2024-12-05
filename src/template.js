@@ -33,6 +33,7 @@ select_version.addEventListener("change",()=>{
 /**
  * Header
  */
+const addNewDocs=document.querySelector("[data-newDocsBtn]"); 
 const moon=document.querySelector("[data-moon]");
 const light=document.querySelector("[data-light]");
 const setting=document.querySelector("[data-setting]");
@@ -54,6 +55,10 @@ light.addEventListener("click",()=>{
     moon.style.display="block";
     light.style.display="none";
     darkMode.classList.replace("dark", "light");
+}); 
+
+addNewDocs.addEventListener("click",()=>{
+    alert("this feature is not available yet ! "); 
 }); 
 
 /**
