@@ -30,3 +30,10 @@
     border: 1px solid #dee2e6;
     overflow-x: auto;
   }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    background:none; 
+  }

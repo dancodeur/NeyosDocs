@@ -37,7 +37,11 @@
             <!---Menu de navigation du header-->
 
             <menu class="bg-slate-50 dark:bg-neutral-800  text-slate-50  p-3 text-xs flex justify-end">
-                <ul class="flex md:space-x-5 space-x-3 ">
+                <ul class="flex items-center md:space-x-5 space-x-3 ">
+                    <!--Message Header-->
+                    <div>
+                        <p class="text-red-500" data-headerMsg>Mode édition activé</p>
+                    </div>
                     <!--Light and darkMode-->
                     <div>
                         <li>
@@ -63,6 +67,13 @@
                         </li>
 
                         <li>
+                            <!--Edition-->
+                            <svg data-editionMode xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 stroke-indigo-400 cursor-pointer">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                            </svg>  
+                        </li>
+
+                        <li>
                             <!--Setting-->
                             <svg data-setting xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 stroke-indigo-400 cursor-pointer">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.559.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z" />
@@ -81,7 +92,12 @@
                     <h1 class="text-xl">Documentation OTRAC OS  <span class="font-semibold"> <span id="version"></span> </span></h1>
                     
                     <!---Header-->
-                    <table class="text-xs text-center">
+                    <table class="text-xs text-center md:relative">
+                        <!--editon mode is active...-->
+                        <svg data-edit-header-table xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 absolute  top-[4.5rem] -rotate-90 left-[10.3rem] stroke-indigo-400">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                        </svg>
+                          
 
                         <thead>
                             <tr>
@@ -122,12 +138,12 @@
 
                                 <tr>
                                     <th scope="row" data-block class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-2 font-semibold">Description</th>
-                                    <td colspan="4" data-block class="block-Header-0 p-2 bg-slate-200 font-semibold cursor-pointer hover:bg-slate-300 ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800">Identifiant unique ICCID</td>
-                                    <td colspan="2" data-block class="block-Header-1 p-2 bg-slate-200 font-semibold cursor-pointer hover:bg-slate-300 ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800">Mode d'envoie</td>
-                                    <td colspan="4" data-block class="block-Header-2 p-2 bg-slate-200 font-semibold cursor-pointer hover:bg-slate-300 ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800">Numéro unique associé au message</td>
-                                    <td colspan="2" data-block class="block-Header-3 p-2 bg-slate-200 font-semibold cursor-pointer hover:bg-slate-300 ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800">Niveau de batterie</td>
-                                    <td colspan="2" data-block class="block-Header-4 p-2 bg-slate-200 font-semibold cursor-pointer hover:bg-slate-300 ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800">Température</td>
-                                    <td colspan="2" data-block class="block-Header-5 p-2 bg-slate-200 font-semibold cursor-pointer hover:bg-slate-300 ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800">Flags</td>
+                                    <td colspan="4" data-block class="block-Header-0 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Identifiant unique ICCID" class="bg-slate-200"></td>
+                                    <td colspan="2" data-block class="block-Header-1 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Mode d'envoie" class="bg-slate-200"></td>
+                                    <td colspan="4" data-block class="block-Header-2 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Numéro unique associé au message" class="bg-slate-200"></td>
+                                    <td colspan="2" data-block class="block-Header-3 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Niveau de batterie" class="bg-slate-200"></td>
+                                    <td colspan="2" data-block class="block-Header-4 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Température" class="bg-slate-200"></td>
+                                    <td colspan="2" data-block class="block-Header-5 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Flags" class="bg-slate-200"></td>
                                 </tr>
                         
 
@@ -182,6 +198,12 @@
 
                         </tbody>
                     </table>
+
+                    <!--Buton valider-->
+                    <div class="flex space-x-2" data-header-editMode>
+                        <button class="rounded p-2 bg-indigo-300 text-xs hover:bg-indigo-400 ease-in-out duration-75 dark:bg-neutral-800 dark:hover:bg-neutral-900">Mettre à jour</button>
+                        <button class="rounded p-2 bg-indigo-300 text-xs hover:bg-indigo-400 ease-in-out duration-75 dark:bg-neutral-800 dark:hover:bg-neutral-900">Annuler</button>
+                    </div>
 
                     <!---payload-->
                     <table class="text-xs text-center">
