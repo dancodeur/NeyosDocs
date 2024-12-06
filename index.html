@@ -91,11 +91,13 @@
             <!-- Contenu principale de la page -->
 
             <div class="grid grid-cols-12 md:grid-cols-11 dark:bg-neutral-950 min-h-screen dark:text-slate-50">
-                <main class="col-span-12 md:col-span-8 space-y-6  px-2 md:p-6">
+                <main class="col-span-12 md:col-span-12 space-y-6  px-2 md:p-6">
                     <h1 class="text-xl">Documentation OTRAC OS  <span class="font-semibold"> <span id="version"></span> </span></h1>
                     
+                    <button class="p-2 text-xs text-slate-3 text-slate-50 rounded bg-indigo-400" data-rowBtn>Add row</button>
+                    <button class="p-2 text-xs text-slate-3 text-slate-50 rounded bg-indigo-400" data-cellBtn>Add cell</button>
                     <!---Header-->
-                    <table class="text-xs text-center md:relative">
+                    <table class="text-xs text-center md:relative" data-headerTable>
                         <!--editon mode is active...-->
                         <svg data-edit-header-table xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 absolute  top-[5.3rem] -rotate-90 left-[10.3rem] stroke-indigo-400">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
@@ -111,92 +113,92 @@
                         <tbody>
                                 <tr>
                                     <th scope="rowgroup" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-2 font-semibold">Caractères</th>
-                                    <td data-block class="block-Header-1 p-2">1</td>
-                                    <td data-block class=" block-Header-2 p-2">2</td>
-                                    <td data-block class=" block-Header-3 p-2">3</td>
-                                    <td data-block class=" block-Header-4 p-2">4</td>
-                                    <td data-block class=" block-Header-5 p-2">5</td>
-                                    <td data-block class=" block-Header-6 p-2">6</td>
-                                    <td data-block class=" block-Header-7 p-2">7</td>
-                                    <td data-block class=" block-Header-8 p-2">8</td>
-                                    <td data-block class=" block-Header-9 p-2">9</td>
-                                    <td data-block class=" block-Header-10 p-2">10</td>
-                                    <td data-block class=" block-Header-11 p-2">11</td>
-                                    <td data-block class=" block-Header-12 p-2">12</td>
-                                    <td data-block class=" block-Header-13 p-2">13</td>
-                                    <td data-block class=" block-Header-14 p-2">14</td>
-                                    <td data-block class=" block-Header-15 p-2">15</td>
-                                    <td data-block class=" block-Header-16 p-2">16</td>
+                                    <td data-block class="block-Header-1 p-[0.2rem]">1</td>
+                                    <td data-block class=" block-Header-2 p-[0.2rem]">2</td>
+                                    <td data-block class=" block-Header-3 p-[0.2rem]">3</td>
+                                    <td data-block class=" block-Header-4 p-[0.2rem]">4</td>
+                                    <td data-block class=" block-Header-5 p-[0.2rem]">5</td>
+                                    <td data-block class=" block-Header-6 p-[0.2rem]">6</td>
+                                    <td data-block class=" block-Header-7 p-[0.2rem]">7</td>
+                                    <td data-block class=" block-Header-8 p-[0.2rem]">8</td>
+                                    <td data-block class=" block-Header-9 p-[0.2rem]">9</td>
+                                    <td data-block class=" block-Header-10 p-[0.2rem]">10</td>
+                                    <td data-block class=" block-Header-11 p-[0.2rem]">11</td>
+                                    <td data-block class=" block-Header-12 p-[0.2rem]">12</td>
+                                    <td data-block class=" block-Header-13 p-[0.2rem]">13</td>
+                                    <td data-block class=" block-Header-14 p-[0.2rem]">14</td>
+                                    <td data-block class=" block-Header-15 p-[0.2rem]">15</td>
+                                    <td data-block class=" block-Header-16 p-[0.2rem]">16</td>
                                 </tr>
 
                                 <tr>
-                                    <th scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-2 font-semibold">Octets</th>
-                                    <td colspan="4" data-block class="block-Header-0 p-2">2</td>
-                                    <td colspan="2" data-block class="block-Header-1 p-2">1</td>
-                                    <td colspan="4" data-block class="block-Header-2 p-2">2</td>
-                                    <td colspan="2" data-block class="block-Header-3 p-2">1</td>
-                                    <td colspan="2" data-block class="block-Header-4 p-2">1</td>
-                                    <td colspan="2" data-block class="block-Header-5 p-2">1</td>
+                                    <th data-cells="0" scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-[0.2rem] font-semibold">Octets</th>
+                                    <td data-cells="1" colspan="4" data-block class="block-Header-0 p-[0.2rem]">2</td>
+                                    <td data-cells="2" colspan="2" data-block class="block-Header-1 p-[0.2rem]">1</td>
+                                    <td data-cells="3" colspan="4" data-block class="block-Header-2 p-[0.2rem]">2</td>
+                                    <td data-cells="4" colspan="2" data-block class="block-Header-3 p-[0.2rem]">1</td>
+                                    <td data-cells="5" colspan="2" data-block class="block-Header-4 p-[0.2rem]">1</td>
+                                    <td data-cells="6" colspan="2" data-block class="block-Header-5 p-[0.2rem]">1</td>
                                 </tr>   
 
                                 <tr>
-                                    <th scope="row" data-block class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-2 font-semibold">Description</th>
-                                    <td colspan="4" data-block class="block-Header-0 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Identifiant unique ICCID" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
-                                    <td colspan="2" data-block class="block-Header-1 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Mode d'envoie" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
-                                    <td colspan="4" data-block class="block-Header-2 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Numéro unique associé au message" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
-                                    <td colspan="2" data-block class="block-Header-3 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Niveau de batterie" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
-                                    <td colspan="2" data-block class="block-Header-4 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Température" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
-                                    <td colspan="2" data-block class="block-Header-5 p-2 bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Flags" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
+                                    <th scope="row" data-block class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-[0.2rem] font-semibold">Description</th>
+                                    <td colspan="4" data-block class="block-Header-0 p-[0.2rem] bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Identifiant unique ICCID" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
+                                    <td colspan="2" data-block class="block-Header-1 p-[0.2rem] bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Mode d'envoie" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
+                                    <td colspan="4" data-block class="block-Header-2 p-[0.2rem] bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Numéro unique associé au message" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
+                                    <td colspan="2" data-block class="block-Header-3 p-[0.2rem] bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Niveau de batterie" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
+                                    <td colspan="2" data-block class="block-Header-4 p-[0.2rem] bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Température" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
+                                    <td colspan="2" data-block class="block-Header-5 p-[0.2rem] bg-slate-200 font-semibold cursor-pointer ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800"><input data-input type="text" disabled value="Flags" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-center"></td>
                                 </tr>
                         
 
                               <tr>
-                                  <th scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-2 font-semibold">Type</th>
-                                  <td colspan="4" data-block class="block-Header-0 p-2">Hexa</td>
-                                  <td colspan="2" data-block class="block-Header-1 p-2">Booléen</td>
-                                  <td colspan="4" data-block class="block-Header-2 p-2">Hexa</td>
-                                  <td colspan="2" data-block class="block-Header-3 p-2">Hexa</td>
-                                  <td colspan="2" data-block class="block-Header-4 p-2">Hexa</td>
-                                  <td colspan="2" data-block class="block-Header-5 p-2">Hexa</td>
+                                  <th scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-[0.2rem] font-semibold">Type</th>
+                                  <td colspan="4" data-block class="block-Header-0 p-[0.2rem]">Hexa</td>
+                                  <td colspan="2" data-block class="block-Header-1 p-[0.2rem]">Booléen</td>
+                                  <td colspan="4" data-block class="block-Header-2 p-[0.2rem]">Hexa</td>
+                                  <td colspan="2" data-block class="block-Header-3 p-[0.2rem]">Hexa</td>
+                                  <td colspan="2" data-block class="block-Header-4 p-[0.2rem]">Hexa</td>
+                                  <td colspan="2" data-block class="block-Header-5 p-[0.2rem]">Hexa</td>
                               </tr>
                               
                               <tr>
-                                  <th scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-2 font-semibold">Unité</th>
-                                  <td colspan="4" data-block class="block-Header-0 p-2">entier</td>
-                                  <td colspan="2" data-block class="block-Header-1 p-2">Boolean</td>
-                                  <td colspan="4" data-block class="block-Header-2 p-2">entier</td>
-                                  <td colspan="2" data-block class="block-Header-3 p-2">%</td>
-                                  <td colspan="2" data-block class="block-Header-4 p-2">°C</td>
-                                  <td colspan="2" data-block class="block-Header-5 p-2">masque binaire</td>
+                                  <th scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-[0.2rem] font-semibold">Unité</th>
+                                  <td colspan="4" data-block class="block-Header-0 p-[0.2rem]">entier</td>
+                                  <td colspan="2" data-block class="block-Header-1 p-[0.2rem]">Boolean</td>
+                                  <td colspan="4" data-block class="block-Header-2 p-[0.2rem]">entier</td>
+                                  <td colspan="2" data-block class="block-Header-3 p-[0.2rem]">%</td>
+                                  <td colspan="2" data-block class="block-Header-4 p-[0.2rem]">°C</td>
+                                  <td colspan="2" data-block class="block-Header-5 p-[0.2rem]">masque binaire</td>
                               </tr>
                               
                               <tr>
-                                  <th scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-2 font-semibold">Conversion</th>
-                                  <td colspan="4" data-block class="block-Header-0 p-2">Non</td>
-                                  <td colspan="2" data-block class="block-Header-1 p-2">0 LTE / 1 SAT</td>
-                                  <td colspan="4" data-block class="block-Header-2 p-2">-</td>
-                                  <td colspan="2" data-block class="block-Header-3 p-2">-</td>
-                                  <td colspan="2" data-block class="block-Header-4 p-2">/10</td>
-                                  <td colspan="2" data-block class="block-Header-5 p-2">-</td>
+                                  <th scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-[0.2rem] font-semibold">Conversion</th>
+                                  <td colspan="4" data-block class="block-Header-0 p-[0.2rem]">Non</td>
+                                  <td colspan="2" data-block class="block-Header-1 p-[0.2rem]">0 LTE / 1 SAT</td>
+                                  <td colspan="4" data-block class="block-Header-2 p-[0.2rem]">-</td>
+                                  <td colspan="2" data-block class="block-Header-3 p-[0.2rem]">-</td>
+                                  <td colspan="2" data-block class="block-Header-4 p-[0.2rem]">/10</td>
+                                  <td colspan="2" data-block class="block-Header-5 p-[0.2rem]">-</td>
                               </tr>
                               <tr>
-                                  <th scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-2 font-semibold">Min</th>
-                                  <td colspan="4" data-block class="block-Header-0 p-2">0</td>
-                                  <td colspan="2" data-block class="block-Header-1 p-2">0</td>
-                                  <td colspan="4" data-block class="block-Header-2 p-2">0</td>
-                                  <td colspan="2" data-block class="block-Header-3 p-2">0</td>
-                                  <td colspan="2" data-block class="block-Header-4 p-2">-128</td>
-                                  <td colspan="2" data-block class="block-Header-5 p-2">00000000</td>
+                                  <th scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-[0.2rem] font-semibold">Min</th>
+                                  <td colspan="4" data-block class="block-Header-0 p-[0.2rem]">0</td>
+                                  <td colspan="2" data-block class="block-Header-1 p-[0.2rem]">0</td>
+                                  <td colspan="4" data-block class="block-Header-2 p-[0.2rem]">0</td>
+                                  <td colspan="2" data-block class="block-Header-3 p-[0.2rem]">0</td>
+                                  <td colspan="2" data-block class="block-Header-4 p-[0.2rem]">-128</td>
+                                  <td colspan="2" data-block class="block-Header-5 p-[0.2rem]">00000000</td>
                               </tr>
                               
                               <tr>
-                                  <th scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-2 font-semibold">Max</th>
-                                  <td colspan="4"  data-block  class="block-Header-0 p-2">65535</td>
-                                  <td colspan="2" data-block class="block-Header-1 p-2">1</td>
-                                  <td colspan="4" data-block class="block-Header-2 p-2">65535</td>
-                                  <td colspan="2" data-block class="block-Header-3 p-2">100</td>
-                                  <td colspan="2" data-block class="block-Header-4 p-2">127</td>
-                                  <td colspan="2" data-block class="block-Header-5 p-2">11111111</td>
+                                  <th scope="row" class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-[0.2rem] font-semibold">Max</th>
+                                  <td colspan="4"  data-block  class="block-Header-0 p-[0.2rem]">65535</td>
+                                  <td colspan="2" data-block class="block-Header-1 p-[0.2rem]">1</td>
+                                  <td colspan="4" data-block class="block-Header-2 p-[0.2rem]">65535</td>
+                                  <td colspan="2" data-block class="block-Header-3 p-[0.2rem]">100</td>
+                                  <td colspan="2" data-block class="block-Header-4 p-[0.2rem]">127</td>
+                                  <td colspan="2" data-block class="block-Header-5 p-[0.2rem]">11111111</td>
                               </tr>
 
                         </tbody>
@@ -209,60 +211,86 @@
                     </div>
 
                     <!---payload-->
-                    <table class="text-xs text-center">
-                        <tr>
-                             <th scope="row" colspan="100" class="p-2">Payload</th>
-                        </tr>
+
+                    <div class="flex items-center md:space-x-[5rem]">
+
+                         <!---payload-->
+                          
+                        <table class="text-xs text-center" data-payloadTable>
+                            <tr>
+                                 <th scope="row" colspan="100" class="p-2">Payload</th>
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Caractères</th>
+                                <td class="block-Payload-0 p-[0.2rem]">1</td>
+                                <td class="block-Payload-0 p-[0.2rem]">2</td>
+                                <td class="block-Payload-0 p-[0.2rem]">3</td>
+                                <td class="block-Payload-0 p-[0.2rem]">4</td>
+                            </tr>
+    
+                            <tr>
+                                <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Octets</th>
+                                <td colspan="4" data-block class="block-Payload-0 p-2">2</td>
+                            </tr>
+    
+                            <tr>
+                                <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Description</th>
+                                <td data-block class="block-Payload-0 p-2 cursor-pointer font-semibold bg-slate-200 hover:bg-slate-300 ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800" colspan="4">Mode de fonctionnement</td>
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Type</th>
+                                <td colspan="4" class="block-Payload-0 p-2">Hexa</td>
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Unité</th>
+                                <td colspan="4" class="block-Payload-0 p-2">-</td>
+                            </tr>
+    
+                            <tr>
+                                <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Conversion</th>
+                                <td colspan="4" class="block-Payload-0 p-2">Oui</td>
+                            </tr>
+    
+                            <tr>
+                                <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Min</th>
+                                <td colspan="4" class="block-Payload-0 p-2">0</td>
+                            </tr>
+    
+                            <tr>
+                                <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Max</th>
+                                <td colspan="4" class="block-Payload-0 p-2">15</td>
+                            </tr>
+                        </table>
                         
-                        <tr>
-                            <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Caractères</th>
-                            <td class="block-Payload-0 p-2">1</td>
-                            <td class="block-Payload-0 p-2">2</td>
-                            <td class="block-Payload-0 p-2">3</td>
-                            <td class="block-Payload-0 p-2">4</td>
-                        </tr>
+                         <!--code exemple démonstration-->
 
-                        <tr>
-                            <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Octets</th>
-                            <td colspan="4" data-block class="block-Payload-0 p-2">2</td>
-                        </tr>
-
-                        <tr>
-                            <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Description</th>
-                            <td data-block class="block-Payload-0 p-2 cursor-pointer font-semibold bg-slate-200 hover:bg-slate-300 ease-in-out duration-100 dark:bg-neutral-700 dark:hover:bg-neutral-800" colspan="4">Mode de fonctionnement</td>
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Type</th>
-                            <td colspan="4" class="block-Payload-0 p-2">Hexa</td>
-                        </tr>
-                        
-                        <tr>
-                            <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Unité</th>
-                            <td colspan="4" class="block-Payload-0 p-2">-</td>
-                        </tr>
-
-                        <tr>
-                            <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Conversion</th>
-                            <td colspan="4" class="block-Payload-0 p-2">Oui</td>
-                        </tr>
-
-                        <tr>
-                            <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Min</th>
-                            <td colspan="4" class="block-Payload-0 p-2">0</td>
-                        </tr>
-
-                        <tr>
-                            <th scope="row" class="text-left font-semibold bg-slate-200 p-2 dark:bg-neutral-700 dark:hover:bg-neutral-800">Max</th>
-                            <td colspan="4" class="block-Payload-0 p-2">15</td>
-                        </tr>
-                    </table>
+                        <div class="md:block min-w-[500px] text-xs hidden dark:border-neutral-800 ">
+                            <div class="p-3">
+                                <!-- <pre><code class="language-javascript">console.log("helloWorld") </code></pre> -->
+                                    <div id="code-container" class="space-y-4">
+                                        <div>
+                                            <label for="language-select" class="font-semibold">Choisir un langage : </label>
+                                            <select id="language-select">
+                                                <option value="javascript">JavaScript</option>
+                                                <option value="typescript">TypeScript</option>
+                                                <option value="python">Python</option>
+                                            </select>
+                                        </div>
+                                        <h3>Exemple de déchiffrement</h3>
+                                        <pre><code id="code-block" class="language-javascript"></code></pre>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </main>
                 
                 <!--code exemple démonstration-->
-                <div class="md:block md:col-span-3 text-xs hidden border-l dark:border-neutral-800 ">
+                <!-- <div class="md:block md:col-span-3 text-xs hidden border-l dark:border-neutral-800 ">
                     <div class="p-3">
-                        <!-- <pre><code class="language-javascript">console.log("helloWorld") </code></pre> -->
                             <div id="code-container" class="space-y-6">
                                 <div>
                                     <label for="language-select" class="font-semibold">Choisir un langage : </label>
@@ -276,7 +304,7 @@
                                 <pre><code id="code-block" class="language-javascript"></code></pre>
                           </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </section>
@@ -286,5 +314,7 @@
     <!---script js-->
     <script type="module" src="./src/template.js"></script>
     <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/func/edition_tab.js"></script>
+    
 </body>
 </html>
