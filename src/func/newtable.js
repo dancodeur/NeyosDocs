@@ -5,7 +5,7 @@ const GeneredBtn=document.querySelector("[data-genered]");
 // const nombreColonne=document.querySelector("#colonne"); 
 const nombreLigne=document.querySelector("#ligne");
 
-const newTab=document.querySelector("[data-new_tabs]"); 
+const newTab=document.querySelector("[data-new_tabs] tbody"); 
 const addNewRows=document.querySelector("[data-newRows]"); 
 const addNewCells=document.querySelector("[data-newCells]"); 
 /**
@@ -24,7 +24,7 @@ function EventCells(e){
     /**
      * Code ici
      */
-    console.log(e.target.value); 
+    console.log(e.target.id); 
 }
 
 function addRows(){
