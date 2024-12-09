@@ -79,3 +79,4 @@ cells_dblClick.forEach((element) => {
         }         
     }); 
 })
+

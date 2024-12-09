@@ -84,6 +84,12 @@ edition_mode.addEventListener("click",()=>{
  */
 
 
+/**
+ * Add Page
+ */
+const HomePage=document.querySelector("[data-HomePage]"); 
+HomePage.style.display="block";
+
 
 
 /**
