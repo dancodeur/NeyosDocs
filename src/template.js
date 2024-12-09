@@ -1,6 +1,39 @@
 import './index.css';
 
 /**
+ * Section Page Docs and NewDocs....
+ */
+const DocsSection=document.querySelector("[data-SectionDocs]");  //Section Docs
+const NewDocsSection=document.querySelector("[data-SectionNewDocs]"); // Section NEwDocs
+DocsSection.style.display="block";
+NewDocsSection.style.display="none";
+const addNewDocs=document.querySelector("[data-newDocsBtn]"); // Bouton nouvelle Docs
+let newDocs=false; // toogle action newdocs false/true
+addNewDocs.textContent="Nouvelle version"; // Contenu du texte
+
+addNewDocs.addEventListener("click",()=>{
+
+    newDocs= !newDocs;
+    console.log(newDocs); 
+
+    if(newDocs){
+        DocsSection.style.display="none";
+        NewDocsSection.style.display="block";
+        addNewDocs.innerHTML=`
+           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+           </svg>
+           <span>Retour</span>
+        `;
+    }else{
+        NewDocsSection.style.display="none";
+        DocsSection.style.display="block";
+        addNewDocs.textContent="Nouvelle version";
+    }
+ }); 
+ 
+
+/**
  * Variable Mode Edition
  */
 
@@ -33,7 +66,6 @@ select_version.addEventListener("change",()=>{
 /**
  * Header
  */
-const addNewDocs=document.querySelector("[data-newDocsBtn]"); 
 const moon=document.querySelector("[data-moon]");
 const light=document.querySelector("[data-light]");
 const setting=document.querySelector("[data-setting]");
@@ -57,9 +89,6 @@ light.addEventListener("click",()=>{
     darkMode.classList.replace("dark", "light");
 }); 
 
-addNewDocs.addEventListener("click",()=>{
-    alert("this feature is not available yet ! "); 
-}); 
 
 /**
  * Fonction du mode édition
@@ -84,11 +113,7 @@ edition_mode.addEventListener("click",()=>{
  */
 
 
-/**
- * Add Page
- */
-const HomePage=document.querySelector("[data-HomePage]"); 
-HomePage.style.display="block";
+
 
 
 

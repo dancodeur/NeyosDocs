@@ -38,7 +38,7 @@
 
             <menu class="bg-slate-50 dark:bg-neutral-800  text-slate-50  p-3 text-xs flex justify-between">
                 <div>
-                    <button class="p-2 rounded bg-indigo-400" data-newDocsBtn>Nouvelle version</button>
+                    <button class="p-2 rounded bg-indigo-400 flex items-center space-x-2" data-newDocsBtn></button>
                 </div>
                 <ul class="flex items-center md:space-x-5 space-x-3 ">
                     <!--Message Header-->
@@ -91,8 +91,8 @@
             <!-- Contenu principale de la page -->
 
             <div class="grid grid-cols-12 md:grid-cols-11 dark:bg-neutral-950 min-h-screen dark:text-slate-50">
-                <main data-HomePage class="col-span-12 md:col-span-12 space-y-6  px-2 md:p-6">
-                    <h1 class="text-xl">Documentation OTRAC OS  <span class="font-semibold"> <span id="version"></span> </span></h1>
+                <main data-SectionDocs class="col-span-12 md:col-span-12 space-y-6  px-2 md:p-6">
+                    <h1 class="text-xl">Docs OTRAC OS  <span class="font-semibold"> <span id="version"></span> </span></h1>
                     
                     <button class="p-2 text-xs text-slate-3 text-slate-50 rounded bg-indigo-400" data-rowBtn>Add row</button>
                     <button class="p-2 text-xs text-slate-3 text-slate-50 rounded bg-indigo-400" data-cellBtn>Add cell</button>
@@ -287,27 +287,47 @@
                     </div>
                     
                 </main>
-                
-                <!--code exemple démonstration-->
-                <!-- <div class="md:block md:col-span-3 text-xs hidden border-l dark:border-neutral-800 ">
-                    <div class="p-3">
-                            <div id="code-container" class="space-y-6">
-                                <div>
-                                    <label for="language-select" class="font-semibold">Choisir un langage : </label>
-                                    <select id="language-select">
-                                        <option value="javascript">JavaScript</option>
-                                        <option value="typescript">TypeScript</option>
-                                        <option value="python">Python</option>
-                                    </select>
-                                </div>
-                                <h3>Exemple de déchiffrement</h3>
-                                <pre><code id="code-block" class="language-javascript"></code></pre>
-                          </div>
-                    </div>
-                </div> -->
 
-
+                <!--create- newDocs-->
                 
+                <main data-SectionNewDocs class="col-span-12 md:col-span-12 space-y-6  px-2 md:p-6">
+                    <h1 class="text-xl">New Table  <span class="font-semibold"> <span id="version"></span> </span></h1>
+                    
+                    <section class="flex items-center space-x-3">
+                        <div>
+                            <label for="ligne">Nombre de ligne</label>
+                             <input id="ligne" type="number" min="0" class="border w-[3rem]">
+                        </div>
+                        <!-- <div>
+                            <label for="colonne">Nombre de colonne</label>
+                             <input id="colonne" type="number" min="0" class="border w-[3rem]">
+                        </div> -->
+                        <button data-genered class="p-2 text-xs text-slate-3 text-slate-50 rounded bg-indigo-600 flex items-center space-x-2">
+                            <span> Générer</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                            </svg>  
+                        </button>
+                    </section>
+                    <button class="p-2 text-xs text-slate-3 text-slate-50 rounded bg-indigo-400" data-newRows>Add row</button>
+                    <button class="p-2 text-xs text-slate-3 text-slate-50 rounded bg-indigo-600" data-deleteRows>Delete row</button>
+                    <button class="p-2 text-xs text-slate-3 text-slate-50 rounded bg-indigo-400" data-newCells>Add cell</button>
+                    <button class="p-2 text-xs text-slate-3 text-slate-50 rounded bg-indigo-600" data-deleteCells>Delete cell</button>
+
+                    <table data-new_tabs>
+                         <tbody class="text-xs">
+                            <tr>
+                                <th class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-[0.2rem] font-semibold" scope="row">Caractères</th>
+                            </tr>
+                            <tr>
+                                <th class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-[0.2rem] font-semibold" scope="row">Octes</th>
+                            </tr>
+                            <tr>
+                                <th class="bg-slate-200 dark:bg-neutral-700 dark:hover:bg-neutral-800 text-left p-[0.2rem] font-semibold" scope="row">Description</th>
+                            </tr>
+                         </tbody>
+                    </table> 
+                </main>    
             </div>
 
         </section>
@@ -318,7 +338,7 @@
     <script type="module" src="./src/template.js"></script>
     <script type="module" src="./src/main.js"></script>
     <script type="module" src="./src/func/edition_tab.js"></script>
-    <script type="module" src="./src/func/new_tab.js"></script>
+    <script type="module" src="./src/func/newtable.js"></script>
     
 </body>
 </html>
